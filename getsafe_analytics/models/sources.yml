@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: getsafe_data_raw
+    database: getsafe-bigquery-prod
+    schema: getsafe_data_raw
+    tables: 
+      - name: getsafe_transaction_data_raw
+      - name: accounting_monthly_closing
+      - name: sample_products_customers
+
+  - name: getsafe_curated
+    database: getsafe-bigquery-prod
+    schema: getsafe_curated
+    tables: 
+      - name: getsafe_transaction_data_curated 
+      - name: getsafe_contracts_curated

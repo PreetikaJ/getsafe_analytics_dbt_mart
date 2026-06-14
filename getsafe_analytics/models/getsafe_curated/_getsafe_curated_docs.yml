@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: getsafe_transaction_data_curated
+    description: "dbt model for transactions dataset."
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+    columns:
+      - name: transaction_id
+        description: "Unique transaction ID."
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        description: "Timestamp when the transaction was created."
+      - name: finance_month
+        description: "Truncated month and year from the created_at timestamp for financial reporting purposes."
+      - name: premium_amount
+        description: "Amount of the premium."
+      - name: premium_processed
+        description: "Amount of the premium that has been processed."
+      - name: premium_refunded
+        description: "Amount of the premium that has been refunded."
+      - name: premium_amount_normalized
+        description: "Net amount of the premium after processing and refunds."
+      - name: premium_currency
+        description: "Currency of the premium amount."
+      - name: party
+        description: "ID of the party associated with the premium."
+      - name: premium_status
+        description: "Latest status of the premium."
+      - name: is_premium_relevant
+        description: "Flag indicating if the premium is processed or refunded. If the premium is failed then the flag says false."
+      - name: transaction_type
+        description: "Type of the transaction, whether it's a premium or a refund."
+        
+  - name: getsafe_contracts_curated
+    description: "dbt model for contracts dataset."
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+    columns:
+      - name: acquisition_timestamp
+        description: "Timestamp when the contract got signed."
+      - name: acquisition_date
+        description: "Date when the contract got signed."
+      - name: started_at
+        description: "Date when the contract started."
+      - name: churned_at
+        description: "Date when the contract ended."
+      - name: user_id
+        description: "ID of the user who owns the contract."
+      - name: monthly_premium
+        description: "Monthly premium amount for the contract."
+      - name: product_group
+        description: "Group to which the product belongs."
+      - name: hash_key
+        description: "Unique hash key for the contract."

@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: getsafe_hypothesis_1
+    description: "Hypothesis 1: The number of transactions varies across different dates in a month, with certain dates missing from the csv provided, the data seems incomplete."
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+
+  - name: getsafe_hypothesis_2
+    description: "Hypothesis 2: Status affect on the premium amount processed and accounted."
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+
+  - name: getsafe_hypothesis_3
+    description: "Hypothesis 3: Gross premium amount v/s net premium amount."
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+      

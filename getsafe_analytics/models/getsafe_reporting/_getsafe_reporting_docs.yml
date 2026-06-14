@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: getsafe_transaction_data_reporting
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: ['party', 'accounting_month']
+    description: "dbt model for transactions dataset."
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+    columns:
+      - name: party
+        description: "Unique transaction ID."
+      - name: month
+        description: "Date when the booking was made by the passenger."
+      - name: accounting_premium
+        description: "Latest status of the booking."
+      - name: finance_premium
+        description: "Id of the driver who accepted the booking."
+      - name: gross_premium_amount
+        description: "Total premium amount."
+      - name: premium_refunded
+        description: "Amount of premium that has been refunded."
+      - name: premium_processed
+        description: "Amount of premium that has been processed."
+      - name: variance
+        description: "Estimated fare in Euros, based on the distance between pick-up and destination."
+      - name: percentage_variance
+        description: "Date when the booking was made by the passenger."
+      - name: discrepancy_outcome
+        description: "Id of the driver who accepted the booking."
+
+  - name: getsafe_contracts_reporting
+    description: "dbt model for contracts dataset."
+    config:
+      persist_docs:
+        relation: true
+        columns: true
+        

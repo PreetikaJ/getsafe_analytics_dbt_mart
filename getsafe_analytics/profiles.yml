@@ -1,0 +1,49 @@
+getsafe_analytics:
+  outputs:
+    dev:
+      dataset: getsafe_data_raw
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: C:\Users\jainp\keys\getsafe-bigquery-prod-aa5c99d10326.json
+      location: EU
+      method: service-account
+      priority: interactive
+      project: getsafe-bigquery-prod
+      threads: 10
+      type: bigquery
+  
+    staging:
+      dataset: getsafe_curated
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: C:\Users\jainp\keys\getsafe-bigquery-prod-aa5c99d10326.json
+      location: EU
+      method: service-account
+      priority: interactive
+      project: getsafe-bigquery-prod
+      threads: 10
+      type: bigquery
+
+    prod:
+      dataset: getsafe_reporting
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: C:\Users\jainp\keys\getsafe-bigquery-prod-aa5c99d10326.json
+      location: EU
+      method: service-account
+      priority: interactive
+      project: getsafe-bigquery-prod
+      threads: 10
+      type: bigquery
+
+    stage:
+      dataset: getsafe_case_study_hypothesis
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: C:\Users\jainp\keys\getsafe-bigquery-prod-aa5c99d10326.json
+      location: EU
+      method: service-account
+      priority: interactive
+      project: getsafe-bigquery-prod
+      threads: 10
+      type: bigquery
