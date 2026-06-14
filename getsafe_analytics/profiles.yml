@@ -4,7 +4,7 @@ getsafe_analytics:
       dataset: getsafe_data_raw
       job_execution_timeout_seconds: 300
       job_retries: 1
-      keyfile: C:\Users\jainp\keys\getsafe-bigquery-prod-aa5c99d10326.json
+      # keyfile: 'Your JSON Key'
       location: EU
       method: service-account
       priority: interactive
@@ -16,7 +16,7 @@ getsafe_analytics:
       dataset: getsafe_curated
       job_execution_timeout_seconds: 300
       job_retries: 1
-      keyfile: C:\Users\jainp\keys\getsafe-bigquery-prod-aa5c99d10326.json
+      # keyfile: 'Your JSON Key'
       location: EU
       method: service-account
       priority: interactive
@@ -28,7 +28,7 @@ getsafe_analytics:
       dataset: getsafe_reporting
       job_execution_timeout_seconds: 300
       job_retries: 1
-      keyfile: C:\Users\jainp\keys\getsafe-bigquery-prod-aa5c99d10326.json
+      # keyfile: 'Your JSON Key'
       location: EU
       method: service-account
       priority: interactive
@@ -40,7 +40,7 @@ getsafe_analytics:
       dataset: getsafe_case_study_hypothesis
       job_execution_timeout_seconds: 300
       job_retries: 1
-      keyfile: C:\Users\jainp\keys\getsafe-bigquery-prod-aa5c99d10326.json
+      # keyfile: 'Your JSON Key'
       location: EU
       method: service-account
       priority: interactive
